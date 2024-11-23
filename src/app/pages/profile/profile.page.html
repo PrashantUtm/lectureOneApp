@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-my-label></app-my-label>
+  <div class="ion-padding">
+    <h3>Gender</h3>
+    <ion-item>
+      <ion-radio-group value="male">
+        <ion-radio value="female">Female</ion-radio><br />
+        <ion-radio value="male">Male</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+    <h3>Dietary Preferences</h3>
+    <ion-item>
+      <ion-select label="" label-placement="stacked">
+        <ion-select-option value="vegeterian">Vegeterian</ion-select-option>
+        <ion-select-option value="nonVeg">Non Vegeterian</ion-select-option>
+        <ion-select-option value="vegan">Vegan</ion-select-option>
+        <ion-select-option value="other">Other</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <h3>Course</h3>
+    <ion-item>
+      <ion-input placeholder="Enter your course title"></ion-input>
+    </ion-item>
+    <h3>Receive promotion emails</h3>
+    <ion-item>
+      <ion-toggle>
+        <ion-label>I would like to receive emails about sales.</ion-label>
+        <ion-note color="medium">Unsubscribe at any time</ion-note>
+      </ion-toggle>
+    </ion-item>
+  </div>
+</ion-content>

@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
+    console.log(this.getNumber(true));
+    console.log(this.getNumber(false));
 
+    console.log(5/0);
+    console.log(-5/0);
+  }
+
+  private getNumber(x : boolean) : number {
+    if (x) {
+      return Math.random() * 5;
+    } else {
+      return NaN;
+    }
+  }
 }
