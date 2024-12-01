@@ -29,10 +29,18 @@
     </ion-item>
     <h3>Receive promotion emails</h3>
     <ion-item>
-      <ion-toggle>
+      <ion-toggle [(ngModel)]="isEmailVisible">
         <ion-label>I would like to receive emails about sales.</ion-label>
         <ion-note color="medium">Unsubscribe at any time</ion-note>
       </ion-toggle>
     </ion-item>
+    @if (isEmailVisible) {
+      <h3>Email</h3>
+      <ion-item>
+        <ion-input [(ngModel)]="emailAddress" placeholder="email@domain.co" (ionInput)="emailChanged()"></ion-input>
+        <ion-button (click)="verifyEmail()" [disabled]="!isEmailChanged">Verify</ion-button>
+      </ion-item>
+    }
+    
   </div>
 </ion-content>

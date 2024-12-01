@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-my-label',
   templateUrl: './my-label.component.html',
   styleUrls: ['./my-label.component.scss'],
 })
-export class MyLabelComponent  implements OnInit {
+export class MyLabelComponent  implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor() { 
+    console.log('created');
+  }
 
-  ngOnInit() {}
+  ngOnDestroy(): void {
+    console.log('destroyed');
+  }
 
+  ngOnInit() {
+    console.log('init');
+  }
 }

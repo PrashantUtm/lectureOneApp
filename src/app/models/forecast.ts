@@ -1,8 +1,9 @@
 import { ForecastType } from "../enums/forecast-type";
 
 export interface Forecast {
-    date: Date,
+    readonly date: Date,
     temperature: number,
     type: ForecastType,
-    location: string
+    location: string,
+    rainfall?: number
 }
