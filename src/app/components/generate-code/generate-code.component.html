@@ -1,0 +1,6 @@
+<ion-card>
+  <ion-card-content>
+    <ion-label>{{ code }}</ion-label>
+    <ion-button (click)="generateCode()" [disabled]="!isButtonEnabled">{{ buttonLabel }}</ion-button>
+  </ion-card-content>
+</ion-card>

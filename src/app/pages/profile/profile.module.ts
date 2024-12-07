@@ -8,6 +8,7 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
 import { MyLabelComponent } from 'src/app/components/my-label/my-label.component';
+import { GenerateCodeComponent } from 'src/app/components/generate-code/generate-code.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { MyLabelComponent } from 'src/app/components/my-label/my-label.component
     IonicModule,
     ProfilePageRoutingModule
   ],
-  declarations: [ProfilePage, MyLabelComponent]
+  declarations: [ProfilePage, MyLabelComponent, GenerateCodeComponent]
 })
 export class ProfilePageModule {}

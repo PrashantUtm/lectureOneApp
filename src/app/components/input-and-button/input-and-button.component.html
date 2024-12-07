@@ -1,0 +1,5 @@
+<h3>{{ header }}</h3>
+<ion-item>
+  <ion-input [(ngModel)]="value" [placeholder]="placeholder" (ionInput)="valueChanged()"></ion-input>
+  <ion-button (click)="onButtonClicked()" [disabled]="!hasValueChanged">{{ buttonLabel }}</ion-button>
+</ion-item>
